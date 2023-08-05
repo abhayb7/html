@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {height: 100px;
+        
+            display: flex;
+            background-color: yellow;
+
+        }
+
+        @media (max-width: 500px) {header{
+            background-color: green;
+            height: 700px;
+
+        
+    }
+    #b{
+        display: none;
+    }
+    #c{
+        display: none;
+    }
+
+
+    }
+    @media (max-width: 502px) and (max-width: 1200px){
+        header{
+            background-color: red;
+            height: 400px;
+        }
+        #c{
+            display: none;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="box" class="header">
+        <h2 id="a">india </h2><br>
+        <h2 id="b">asia </h2>
+
+        <h2 id="c">earth</h2>
+    </div>
+</body>
+
+</html>
