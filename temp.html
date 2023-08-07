@@ -1,110 +1,642 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BR Architects</title>
     <style>
-        .contain {
-            height: 200vh;
+        body{
+            margin-top: -2px;
+        }
+        .container{
+            height: 1000h;
+            width: 100%;
+            
+            display: flex;
+            flex-direction: column;
+            
+            
+        }
+
+        .header
+        {
+            height: 10vh;
+            width: 100%;
+            
+            display: flex;
+            position:fixed;
+            background-color: white;
+
+        }
+        .h1
+        {
+            height: 100%;
+            width: 20%;
+            word-spacing: 3vh;
+            letter-spacing: 1vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 135%;
+
+        }
+        .h2{
+            height: 100%;
+            width: 72%;
+            word-spacing: 900%;
+            display: flex;
+            justify-content:right;
+            align-items: center;
+            font-size: 134%;
+
+        }
+        .img1
+        {
+            height: 100vh;
+            width: 100%;
+            
+            background: url("https://www.w3schools.com/w3images/architect.jpg");
+           display: flex;
+           justify-content: center;
+           align-items: center; 
+        }
+        .projects
+        {
+            border-bottom: 1px solid rgb(148, 146, 146);
+
+        }
+
+        .projects1
+        {
+            height: 10vh;
+            width: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+            font-size: 30px;
+        }
+
+        .f1
+        {
+            height: 60vh;
+            width: 100%;
+      
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            
+        }
+        /* #f1id
+        {
+            height:20% ;
+            width: 20%;
+        } */
+        .f11
+        {
+            height: 49%;
+            width: 24%;
+            
+        }
+        
+        
+        .f12
+        {
+            height: 49%;
+            width: 24%;
+           
+        }
+        .f13
+        {
+            height: 49%;
+            width: 24%;
+           
+        }
+        .f14
+        {
+            height: 49%;
+            width: 24%;
+            
+        }
+        .f15
+        {
+            height: 49%;
+            width: 24%;
+           
+        }
+        .f16
+        {
+            height: 49%;
+            width: 24%;
+        
+        }
+        .f17
+        {
+            height: 49%;
+            width: 24%;
+        
+        }
+        .f18
+        {
+            height: 49%;
+            width: 24%;
+        
+        }
+        
+
+        .about
+        {
+            border-bottom: 1px solid rgb(148, 146, 146);
+
+        }
+
+        .about1
+        {
+            height: 10vh;
+            width: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+            font-size: 30px;
+        }
+        .p1{
+            height: 20vh;
+            width: 100%;
+        
+            text-align: center;
+            word-spacing: 3px;
+            word-spacing: 4px;
+            font-size: 17px;
+            padding-block: 10px;
+           
+        }
+
+        /* .f2
+        {
+            height: 60vh;
+            width: 100%;
             border: 2px solid black;
             display: flex;
             flex-wrap: wrap;
-            align-items: center;
+            justify-content: space-evenly;
+            display: inline-block;
+           
+            
+
+        }
+        .f22
+        {
+            display: flex;
+
+            justify-content: space-evenly;
+            
+        } */
+
+        .f2
+        {
+            height: 60vh;
+            width: 100%;
+        
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+        }
+        .f21
+        {
+            
+            height: 60vh;
+            width: 23%;
+        
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            
+
+        }
+        .f211
+        {
+            height:47.4%;
+            width: 100%;
+            
+        }
+        .f212
+        {
+            height:10%;
+            width: 100%;
+            
+        }
+        .f213
+        {
+            height:10%;
+            width: 100%;
+            
+        }
+        .f214
+        {
+            height:20%;
+            width: 100%;
+            
+            word-spacing: 5px;
+            letter-spacing: 2px;
+        }
+        
+        .f215
+        {
+            height:10%;
+            width: 100%;
+            
         }
 
-        .nav {
-            height: 6%;
-            width: 100%;
-            border: 2px solid black;
-            position: fixed;
-            top: 300px;
+        .f22
+        {
+            
+            height: 60vh;
+            width: 23%;
+        
             display: flex;
-            align-items: center;
-            justify-content: space-around;
+            flex-wrap: wrap;
+            flex-direction: column;
+        
+        }
+        .f221
+        {
+            height:47.5%;
+            width: 100%;
+            
+        }
+        .f222
+        {
+            height:10%;
+            width: 100%;
+            
+        }
+        .f223
+        {
+            height:10%;
+            width: 100%;
+            
+        }
+        .f224
+        {
+            height:20%;
+            width: 100%;
+            
+            word-spacing: 5px;
+            letter-spacing: 2px;
+        }
+        
+        .f225
+        {
+            height:10%;
+            width: 100%;
+            
+        }
+        .f23
+        {
+            
+            height: 60vh;
+            width: 23%;
+        
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            
+        }
+        .f231
+        {
+            height:47.5%;
+            width: 100%;
+            
+        }
+        .f232
+        {
+            height:10%;
+            width: 100%;
+            
+        }
+        .f233
+        {
+            height:10%;
+            width: 100%;
+            
+        }
+        .f234
+        {
+            height:20%;
+            width: 100%;
+            
+            word-spacing: 5px;
+            letter-spacing: 2px;
+        }
+        .f235
+        {
+            height:10%;
+            width: 100%;
+            
+        }
+        .f24
+        {
+            
+            height: 60vh;
+            width: 23%;
+        
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        
+        }
+        .f241
+        {
+            height:47.5%;
+            width: 100%;
+            
+        }
+        .f242
+        {
+            height:10%;
+            width: 100%;
+            
+        }
+        .f243
+        {
+            height:10%;
+            width: 100%;
+            
+        }
+        .f244
+        {
+            height:20%;
+            width: 100%;
+            
+            word-spacing: 5px;
+            letter-spacing: 2px;
+        }
+        
+        .f245
+        {
+            height:10%;
+            width: 100%;
+            
+        }
+        .contact
+        {
+            border-bottom: 1px solid rgb(148, 146, 146);
+
         }
 
-        .scene {
-            height: 30%;
-            width: 100%;
+        .contact1
+        {
+            height: 10vh;
+            width: 10%;
             display: flex;
             align-items: center;
-            justify-content: space-around;
-            border: 2px solid black;
+           justify-content: center;
+            
+            font-size: 30px;
+        }
+        .p2
+        {
+            height:7vh ;
+            width: 100%;
+            
+            display: flex;
+            align-items: center;
+            
+        }
+        .form
+        {
+            height: 30vh;
+            width: 100%;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around; 
+        }
+        .image2
+        {
+            height:80vh ;
+            width: 100%;
         }
 
-        .super {
-            height: 12%;
+        .footer
+        {
+            height: 15vh;
             width: 100%;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            border: 2px solid black;
-        }
-
-        .about {
-            height: 8%;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            border: 2px solid black;
-        }
-
-        .legend { 
-            height:10% ;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            border: 2px solid black;
-        }
-
-        .formss {
-            height:10% ;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            border: 2px solid black;
-        }
-
-        .scene2 {
-            height: 30%;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            border: 2px solid black;
-        }
-
-        .power {
-            height: 6%;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            border: 2px solid black;
+            
             background-color: black;
-            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
         }
     </style>
 </head>
-
 <body>
-    <div class="contain">
-        <div class="nav"></div>
-        <div class="scene"></div>
-        <div class="super"></div>
-        <div class="about"></div>
-        <div class="legend"></div>
-        <div class="formss"></div>
-        <dis class="scene2"></dis>
-        <div class="power"></div>
+    <div class="container">
+        <div class="header">
+            <div class="h1">
+                <p><b> BR</b> Architects </p>
+            </div>
+            <div class="h2">
+                <p> Projects &nbsp;&nbsp; About &nbsp;&nbsp; Contact </p>
+            </div>
+
+        </div>
+        <div class="img1" >
+            
+            <h1 style="word-spacing: 18px; letter-spacing: 5px;"><b>BR </b>   Architects</h1>
+
+        </div>
+        <br>
+        <div class="projects">
+            <div class="projects1">
+          
+                <p>Projects</p>
+            </div>
+        </div>
+        
+        <div class="f1"  >
+            <div class="f11"  >
+                <img src="https://www.w3schools.com/w3images/house5.jpg" style="width: 100%; height: 100%;" alt="" >
+                
+
+            </div>
+            <div class="f12"  >
+                <img src="https://www.w3schools.com/w3images/house2.jpg" style="width: 100%; height: 100%;" alt="" >
+
+            </div>
+            <div class="f13"  >
+                <img src="https://www.w3schools.com/w3images/house3.jpg" style="width: 100%; height: 100%;" alt="" >
+
+            </div>
+            <div class="f14"  >
+                <img src="https://www.w3schools.com/w3images/house4.jpg" style="width: 100%; height: 100%;" alt="" >
+
+            </div>
+            <div class="f15"  >
+                <img src="https://www.w3schools.com/w3images/house2.jpg" style="width: 100%; height: 100%;" alt="" >
+
+            </div>
+            <div class="f16"  >
+                <img src="https://www.w3schools.com/w3images/house5.jpg" style="width: 100%; height: 100%;" alt="" >
+
+            </div>
+            <div class="f17"  >
+                <img src="https://www.w3schools.com/w3images/house4.jpg" style="width: 100%; height: 100%;" alt="" >
+
+            </div>
+            <div class="f18"  >
+                <img src="https://www.w3schools.com/w3images/house3.jpg" style="width: 100%; height: 100%;" alt="" >
+
+            </div>
+            
+        </div>
+        <br>
+        <div class="about">
+            <div class="about1">
+                <p>About</p>
+            </div>
+        </div>
+
+        <div class="p1">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae soluta consequatur earum aliquam possimus, a, iusto dolorem, omnis explicabr at ut officia impedit doloremque magnam excepturi ea natus vitae? Amet.
+            Accusamus maiores, sit amet consectetur adipisicing elit. Quae soluta consequatur earum aliquam possimus, a, iusto dolorem, omnis explicabr at ut officia impedit doloremque magnam excepturi ea natus vitae? Amet.
+            Accusamus maiores,   fugiat molestiae, iste qui perspiciatis perferendis id, culpa iusto voluptatem! Tenetur, natus odio vitae aperiam velit numquam, tempora, recusandae amet soluta voluptas ut quis expedita officiis.</p>
+
+        </div>
+
+        <!-- <div class="f2">
+
+            <div class="f21">
+                <img src="https://www.w3schools.com/w3images/team2.jpg" alt="" >
+                <img src="https://www.w3schools.com/w3images/team2.jpg" alt="" >
+                <img src="https://www.w3schools.com/w3images/team3.jpg" alt="" >
+                <img src="https://www.w3schools.com/w3images/team4.jpg" alt="" >
+            </div>
+                <div class="f22">
+                    <h4>john doe</h4>
+                    <h4>john doe</h4>
+                    <h4>john doe</h4>
+                    <h4>john doe</h4>
+
+                </div>
+
+               
+
+
+        </div> -->
+
+        <div class="f2">
+            <div class="f21">
+                <div class="f211"><img src="https://www.w3schools.com/w3images/team2.jpg" style="width: 100%; height: 100%;" alt=""></div>
+                <div class="f212">
+                    <h5>JOhn DOE</h5>
+                </div>
+                <div class="f213"><p>CEO & Founder</p></div>
+                <div class="f214">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
+                <div class="f215">
+                    <button style="height: 100%; width: 100%;">CONTACT</button>
+                </div>
+            </div>
+            <div class="f22">
+                <div class="f221"><img src="https://www.w3schools.com/w3images/team1.jpg" style="width: 100%; height: 100%;" alt=""></div>
+                <div class="f222">
+                    <h5>JOhn DOE</h5>
+                </div>
+                <div class="f223">Architect</div>
+                <div class="f224">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
+                <div class="f225">
+                    <button style="height: 100%; width: 100%;">CONTACT</button>
+                </div>
+            </div>
+            <div class="f23">
+                <div class="f231"><img src="https://www.w3schools.com/w3images/team3.jpg" style="width: 100%; height: 100%;" alt=""></div>
+                <div class="f232">
+                    <h5>JOhn DOE</h5>
+                </div>
+                <div class="f233">Architect</div>
+                <div class="f234">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
+                <div class="f235">
+                    <button style="height: 100%; width: 100%;">CONTACT</button>
+                </div>
+            </div>
+            <div class="f24">
+                <div class="f241"><img src="https://www.w3schools.com/w3images/team4.jpg" style="width: 100%; height: 100%;" alt=""></div>
+                <div class="f242">
+                    <h5>JOhn DOE</h5>
+                </div>
+                <div class="f243">Architect</div>
+                <div class="f244">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</div>
+                <div class="f245">
+                    <button style="height: 100%; width: 100%;"> CONTACT</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact">
+            <div class="contact1">
+                <p>Contact</p>
+            </div>
+        </div>
+       
+        <div class="p2">
+            <p style="word-spacing: 3px; left: 1px; font-size: 20px;">Lets get in touch and talk about your next project.</p>
+
+        </div>
+        <div class="form">
+            <!-- <div class="form1">
+                <button style="height: 6vh; width: 97%;">Name</button>
+            </div>
+            <div class="form2">
+                <button style="height: 6vh; width: 97%;">Email</button>
+            </div>
+            <div class="form3">
+                <button style="height: 6vh; width: 97%;">Subject</button>
+            </div>
+            <div class="form4">
+                <button style="height: 6vh; width: 97%;">Comment</button>
+            </div> -->
+            <form action="form">
+                <!-- <label for="name"></label>
+                <input type="button" value="name" placeholder="Name"><br>
+                <label for="email">Email</label>
+                <label for="subject">Subject</label>
+                <label for="comment">Comment</label> -->
+                <div class="form1">
+                    <input type="text" name="Name" id="Name " placeholder="Name" style="width: 99.5%; height: 30px;">
+
+                </div>
+                <br>
+                <div class="form2">
+                    <input type="email" name="Email" id="Email " placeholder="Email" style="width: 99.5%; height: 30px;">
+
+                </div>
+                <br>
+                <div class="form3">
+                    <input type="text" name="Subject" id="Subject " placeholder="Subject" style="width: 99.5%; height: 30px;">
+
+                </div>
+                <br>
+                <div class="form4">
+                    <input type="text" name="Comment" id=" Comment" placeholder="Comment" style="width: 99.5%; height: 30px;">
+                </div>
+            </form>
+            <div class="send">
+            <button style="height: 35px; width: 150px; background-color: black; color: white;"> SEND MESSAGE</button>
+            </div>
+           
+        </div>
+        <div class="image2">
+            <img src="https://www.w3schools.com/w3images/map.jpg" height="100%" width="100%" alt="">
+        </div>
 
     </div>
+    <div class="footer">
+       <p style="color: white ; font-size: 20px; text-align: center;">Powered by<ins>w3.css</ins></p> 
+    </div>
+    
 </body>
-
 </html>

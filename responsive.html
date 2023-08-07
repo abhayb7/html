@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .box {height: 100px;
+        .box {height: 300px;
         
             display: flex;
             background-color: yellow;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-around;
+        
 
         }
 
-        @media (max-width: 500px) {header{
+        @media (max-width: 500px) {.box{
             background-color: green;
             height: 700px;
 
@@ -28,8 +32,8 @@
 
 
     }
-    @media (max-width: 502px) and (max-width: 1200px){
-        header{
+    @media (min-width: 502px) and (max-width: 1200px){
+        .box{
             background-color: red;
             height: 400px;
         }
@@ -41,7 +45,7 @@
 </head>
 
 <body>
-    <div class="box" class="header">
+    <div class="box" >
         <h2 id="a">india </h2><br>
         <h2 id="b">asia </h2>
 

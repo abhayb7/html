@@ -3,137 +3,368 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width= , initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
     <style>
-        .container {
-            height: 500vh;
-            width: 100%;
-            border: 2px solid black;
+        body {
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+
         }
 
-        .nav {
-            height: 7%;
-            width: 100.8%;
-            border: 2px solid black;
-            position: fixed;
-            background-color: white;
-            margin-top: -10px;
-            margin-left: -10px;
+        .Head {
+            width: 100%;
+            height: 8vh;
+            position: relative;
+        }
+
+        .Head-inside {
+            position: absolute;
+            right: 0px;
+            height: 100%;
+            width: 20%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .Head-Text {
+            height: 50%;
+            width: 20%;
+            margin-top: 15px;
+            font-size: small;
+        }
+
+        .Head-Menu {
+            height: 30%;
+            width: 5%;
+            background-color: transparent;
+            border-radius: 0px solid transparent;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.1s;
+        }
+
+        .Head-Menu:hover {
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .Head-Menu:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .Head-buttons {
+            height: 60%;
+            width: 30%;
+        }
+
+        .signinbutton {
+            height: 100%;
+            width: 100%;
+            border: 0px solid transparent;
+            border-radius: 2px solid transparent;
+            background-color: #4b8bf5;
+            color: white;
+            cursor: pointer;
+            transition: box-shadow 0.4s;
+        }
+
+        .signinbutton:hover {
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #1b66c9;
+        }
+
+        .mainbox {
+            height: 45vh;
+            width: 50%;
+            margin-top: 10vh;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box1 {
+            height: 40%;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
         }
 
         .box2 {
-            height: 30%;
-            width: 99.5%;
-            border: 2px solid black;
-            margin-left: 2px;
-
-        }
-
-        .about {
-            height: 7%;
-            width: 99.5%;
-            border: 2px solid black;
-            margin-top: 10px;
-            margin-left: 2px;
-        }
-
-        .insaan {
-            height: 14.5%;
-            width: 99.5%;
-            border: 2px solid black;
-            margin-top: 10px;
-            margin-left: 2px;
-
-        }
-
-        .contact {
             height: 12%;
-            width: 99.5%;
-            border: 2px solid black;
-            margin-top: 10px;
-            margin-left: 2px;
+            width: 75%;
+            border-radius: 50px;
+            display: flex;
+            border: 2px solid #dadce0;
+            transition: box-shadow 0.1s ease-in-out;
+        }
 
+        .box2:hover {
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .searchicon {
+            width: 6%;
+            height: 90%;
+            padding-top: 1%;
+            padding-left: 2%;
+            padding-bottom: 0.5%;
+        }
+
+        .searchbar {
+            width: 80%;
+            height: 100%;
+            margin-top: 0.2%;
+
+        }
+
+        input {
+            border: 0px solid transparent;
+            width: 100%;
+            height: 90%;
+            font-size: medium;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .mic {
+            width: 6%;
+            height: 80%;
+            padding-top: 1%;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .tooltip {
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90px;
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 12px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s, visibility 0.2s;
+        }
+
+        /*     tooltip         */
+
+        .mic:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .lens {
+            width: 5%;
+            height: 90%;
+            padding-top: 1%;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .lens:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
         }
 
         .box3 {
-            height: 40%;
-            width: 99%;
-            border:2px solid black;
-            margin-top: 10px;
-            margin-left: 7px;
-        }
-
-        .powerby {
-            height: 2%;
-            width: 100.8%;
-            border: 2px solid black;
-
-            background-color: rgb(0, 0, 0);
-           
-            margin-left: -10px;
-            color: white;
+            height: 20%;
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: px;
         }
-        .box1{
-            height: 29%;
-            border: 2px solid black;
-            display: flex;
-            
 
+        .box3div {
+            margin-left: 15px;
         }
-        
-        .br{
+
+        .box3button {
+            padding: 10px;
+            border: 0px solid transparent;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: border 0.1s;
+            background-color: #f8f8f8;
+        }
+
+        .box3button:hover {
+            border: 1.5px solid #dadce0;
+            /* Apply the shadow effect */
+        }
+
+        .box4 {
+            height: 20%;
+            width: 100%;
+        }
+
+        footer {
+            height: 12vh;
+            width: 100%;
+            position: fixed;
+            bottom: 0px;
             display: flex;
+            flex-direction: column;
+            background-color: #f2f2f2;
+        }
+
+        .footer1 {
+            height: 50%;
+            width: 100%;
+            color: grey;
+            margin-left: 20px;
+        }
+
+        .footer2 {
+            height: 50%;
+            width: 100%;
+            border: 1px solid lightgray;
+            display: flex;
+            position: relative;
+            padding: 10px;
+        }
+
+        .footer2left {
+            width: 30%;
+            height: 100%;
+            position: absolute;
+            left: 0px;
+            display: flex;
+        }
+
+        .footer2left1 {
+            width: 20%;
+            height: 100%;
+            text-align: center;
+        }
+
+        .footer2left2 {
+            width: 40%;
+            height: 100%;
+            text-align: center;
+        }
+
+        .footer2right {
+            width: 20%;
+            height: 100%;
+            position: absolute;
+            right: 0px;
+            display: flex;
+            justify-content: space-around;
             align-items: center;
-            justify-content: center;
-            color: blue;
-            font-size: 30px;
-            background-image: ;
-            
         }
-        #achi{
-            margin-left: 2%;
-            margin-top: 1%;
-            color: black;
-            border: 2px ;font-size: 20px;
-           
 
+        .footer2rightbox {
+            width: 30%;
+            height: 100%;
         }
-        :hover{
+
+        #h {
             color: black;
-            background-color: azure;
+        }
+
+        #l {
+            color: #1a0db3;
+            font-size: small;
+        }
+
+        #f {
+            color: grey;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="nav"> <div id="achi" class="hover">
-            <p><b>BR </b>  A r c h i t e c t s</p>
-          
-        </div>
-        </div>
-        <div class="box1">
-           
-            <div class="br"><p> BR ARCHITECT</p></div>
-            
-        </div>
-        <div class="box2">jytmymytejt</div>
-        <div class="about">tsjryyrdnyt</div>
-        <div class="insaan">erhyyhtrjyj</div>
-        <div class="contact">daggerhet</div>
-        <div class="box3"> <img src="https://www.w3schools.com/w3images/map.jpg" alt=""></div>
-        <div class="powerby">
-            <p>Powered by</p>&nbsp;<a href="https://www.w3schools.com/w3css/default.asp">w3.css</a>
+    <div class="Head">
+        <div class="Head-inside">
+            <div class="Head-Text"><a id="h" href="#">
+                    <center>Gmail</center>
+                </a></div>
+            <div class="Head-Text"><a id="h" href="#">Images</a></div>
+            <div class="Head-Menu">
+                <a href="#">
+                    <img src="WhatsAppG1.jpg" alt="Menu" width="95%" height="95%">
+                </a>
+                <div class="tooltip">Google Apps</div>
+            </div>
+            <div class="Head-buttons">
+                <button class="signinbutton">Sign In</button>
+            </div>
         </div>
     </div>
-
+    <div class="mainbox">
+        <div class="box1">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+                alt="Google Image" width="60%%" height="60%">
+        </div>
+        <div class="box2">
+            <div class="searchicon">
+                <img src="WhatsAppG3.jpg" alt="Search icon" width="60%" height="80%">
+            </div>
+            <div class="searchbar">
+                <input type="text" name="" placeholder="Search Google" autofocus>
+            </div>
+            <div class="mic">
+                <img src="WhatsAppG$.jpg" alt="micimage" width="60%" height="80%">
+                <div class="tooltip">Search by voice</div>
+            </div>
+            <div class="lens">
+                <img src="WhatsAppG5.jpg" alt="lensimage" width="60%" height="70%">
+                <div class="tooltip">Seach by Image</div>
+            </div>
+        </div>
+        <div class="box3">
+            <div class="box3div"><button class="box3button"> Google Search </button></div>
+            <div class="box3div"><button class="box3button"> I'm Feeling Lucky </button></div>
+        </div>
+        <div class="box4">
+            <p>
+                <center>Google offered in: <a id="l" href="#">हिन्दी </a> <a id="l" href="#">বাংলা </a> <a id="l"
+                        href="#">తెలుగు </a> <a id="l" href="#">मराठी </a> <a id="l" href="#">தமிழ் </a> <a id="l"
+                        href="#">ગુજરાતી </a> <a id="l" href="#">ಕನ್ನಡ </a> <a id="l" href="#">ਪੰਜਾਬੀ </a> <a id="l"
+                        href="#">മലയാളം</a></center>
+            </p>
+        </div>
+    </div>
+    <footer>
+        <div class="footer1">
+            <p>India</p>
+        </div>
+        <div class="footer2">
+            <div class="footer2left">
+                <div class="footer2left1"><a id="f" href="#">About</a></div>
+                <div class="footer2left1"><a id="f" href="#">Advertising</a></div>
+                <div class="footer2left1"><a id="f" href="#">Business</a></div>
+                <div class="footer2left2"><a id="f" href="#">How Search works</a></div>
+            </div>
+            <div class="footer2right">
+                <div class="footer2rightbox"><a id="f" href="#">Privacy</a></div>
+                <div class="footer2rightbox"><a id="f" href="#">Terms</a></div>
+                <div class="footer2rightbox"><a id="f" href="#">Settings</a></div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
