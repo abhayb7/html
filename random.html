@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RandomColours</title>
+    <style>
+        body {
+            margin: auto;
+        }
+        .container {
+            width: 100vw;
+            height: 200vh;
+            border: 1px solid rgb(243, 234, 234);
+            background-color: rgb(48, 28, 28);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .innerboxes {
+            width: 10%;
+            height: 10%;
+            
+            background-color: transparent;
+            border-radius: 50%;
+            cursor: default;
+            transition: background-color 0.3s;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+        <div class="innerboxes"></div>
+     
+    </div>
+    <script>
+        function getRandomColor() {
+          return '#' + Math.floor(Math.random() * 16777215).toString(16);
+        }
+        
+        const innerboxes = document.querySelectorAll('.innerboxes');
+        
+        innerboxes.forEach(box => {
+          box.addEventListener('mouseenter', () => {
+            box.style.backgroundColor = getRandomColor();
+          });
+        });
+        </script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY | Portfolio</title>
+    <style>
+        body {
+            margin: auto;
+            padding: auto;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: large;
+            font-weight: bold;
+            padding: 1rem 5rem;
+            background-color: #d6caca;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .LOGO {
+            color: #df7f47;
+        }
+
+        .links {
+            display: flex;
+            gap: 1.9rem;
+            list-style-type: none;
+        }
+
+        .links a {
+            color: #df7f47;
+        }
+
+        .links a:hover {
+            color: #ff7235;
+            ;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .menu {
+            font-size: 2rem;
+            border: 0;
+            background-color: transparent;
+            cursor: pointer;
+            display: none;
+        }
+
+        .aboutme {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            height: 80vh;
+            margin: auto;
+            grid-gap: 5rem;
+        }
+
+        .abouttext {
+            box-shadow: 0px 2px 15px 2px #8b8eaf;
+            width: 30vw;
+            padding: 0.5rem;
+            border-radius: 6px;
+        }
+
+        .abouttext p {
+            line-height: 1.5rem;
+            padding: 0.3rem 0;
+        }
+
+        .moreabout {
+            width: 90%;
+            height: 35vh;
+            margin: auto;
+        }
+
+        .moreabout h1{
+            margin-bottom: 1 rem;
+            text-align: center;   
+        }
+        .moreabout p { 
+            padding: 0rem 2rem;
+            text-align: justify;
+        }
+        .skills {
+            width: 90%;
+            height: 70vh;
+            text-align: center;
+            margin: auto;
+            
+        }
+        .skillimg {
+            margin: auto;
+            width: 60%;
+            height: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 1rem;
+            justify-content: center;
+        }
+        .skillicons {
+            width: 20vh;
+            height: 20vh;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 3px 10px #a17a69;
+        }
+        .projects {
+            width: 90%;
+            height: 70vh;
+            text-align: center;
+            margin: auto;
+        }
+        .projectblocks {
+            width: 80%;
+            height: 70%;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .block {
+            width: 25%;
+            height: 80%;
+            border-radius: 11px;
+            padding: 1rem;
+            box-shadow: 0 3px 10px #8b8eaf;
+        }
+        .contacts {
+            width: 90%;
+            height: 50vh;
+            margin: auto;
+        }
+        .contacts h1 {
+            text-align: center;
+        }
+        .contactformcontainer {
+            border: 1px solid transparent;
+            width: 60%;
+            height: 75%;
+            margin: auto;
+            box-shadow: 0 3px 10px #dab3a2;
+            padding: 1.5rem;
+            border-radius: 5px;
+        }
+        .contactformcontainer label {
+            line-height: 2.7em;
+            font-weight: 700;
+            color: #df7f47;
+            text-align: left;
+        }
+        .contactformcontainer textarea, .contactformcontainer input {
+            font-size: 14px;
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 5px;
+            border: 2px solid #df7f47;
+            background-color: transparent;
+            font-size: 1rem;
+            outline: none;
+        }
+        input::placeholder, textarea::placeholder {
+            padding: 0.5rem;
+            color: #df7f47;
+        }
+        #submit-btn:hover {
+            background-color: #df7f47;
+            border: 2px solid #df7f47;
+            cursor: pointer;
+        }
+        .socials {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            grid-gap: 0.5rem;
+            right: 1%;
+            bottom: 40%;
+        }
+        .socicon {
+            width: 3rem; 
+            height: 2rem;
+        }
+        footer {
+            height: 20vh;
+            margin-top: 8vh;
+            text-align: center;
+        }
+        footer h3 {
+            width: 50%;
+            margin: auto;
+            color: #4756df;
+            border-bottom: 2px solid #df7f47;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navigation">
+        <div class="LOGO">
+            <h1>ABHAY BHATI</h1>
+        </div>
+        <ul class="links">
+            <li><a href="#About">About</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Contacts">Contact</a></li>
+        </ul>
+        <button class="menu"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <style>
+                    svg {
+                        fill: #000000
+                    }
+                </style>
+                <path
+                    d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+            </svg></button>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="aboutme" id="About">
+        <img src="https://t3.ftcdn.net/jpg/02/74/70/20/360_F_274702029_dC9sFwkI5xpuHuHvGFcma0zmYTSrE16i.jpg"
+            alt="ABout me Image" width="90%" height="80%">
+     
+    </div>
+
+    <!-- More about -->
+    <div class="moreabout">
+        <h1>More About Me</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque ducimus dignissimos consequuntur earum!
+            Repellat quis ab ipsa ipsum omnis, qui perspiciatis, saepe consectetur neque, veniam quae explicabo
+            assumenda sunt nam?</p>
+            <p>At sint quasi quia a nostrum, expedita temporibus, consectetur, culpa quos debitis delectus veritatis
+            provident quaerat in mollitia optio odit nam architecto? Impedit exercitationem blanditiis eaque. Itaque
+            odit beatae voluptas..</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur
+            nostrum dolor minus, libero delectus praesentium perferendis</p>
+    </div>
+
+    <!-- Skills section -->
+    <div class="skills" id="Skills">
+        <h1>My Top Skills</h1>
+        <div class="skillimg">
+            <img class="skillicons" src="https://eager-williams-af0d00.netlify.app/assets/icons/icons8-html-5.svg" alt="HTML">
+            <img class="skillicons" src="https://eager-williams-af0d00.netlify.app/assets/icons/icons8-css3.svg" alt="CSS">
+            <img class="skillicons" src="https://eager-williams-af0d00.netlify.app/assets/icons/icons8-javascript.svg" alt="JS">
+            <img class="skillicons" src="https://eager-williams-af0d00.netlify.app/assets/icons/icons8-bootstrap.svg" alt="Bootstrap">
+            <img class="skillicons" src="https://eager-williams-af0d00.netlify.app/assets/icons/icons8-react-native.svg" alt="React">
+            <img class="skillicons" src="https://eager-williams-af0d00.netlify.app/assets/icons/icons8-git.svg" alt="Node">
+        </div>
+    </div>
+
+    <!-- Projects section -->
+    <div class="projects" id="Projects">
+        <h1>Some of my Recent Projects</h1>
+        <div class="projectblocks">
+            <div class="block">
+                <img src="https://eager-williams-af0d00.netlify.app/assets/images/expenseTracker.png" alt="Image" width="70%" height="30%">
+                <h3>Expense Tracker</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae tempora animi, sapiente deleniti quod dicta similique, culpa harum laboriosam alias nisi, doloremque in. Aspernatur, incidunt. Magni rerum tempore quo necessitatibus.</p>
+                <a href="#">Check it Out</a>
+            </div>
+            <div class="block">
+                <img src="https://eager-williams-af0d00.netlify.app/assets/images/netflixClone.png" alt="Image" width="70%" height="30%">
+                <h3>Netflix Clone</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae tempora animi, sapiente deleniti quod dicta similique, culpa harum laboriosam alias nisi, doloremque in. Aspernatur, incidunt. Magni rerum tempore quo necessitatibus.</p>
+                <a href="#">Check it Out</a>
+            </div>
+            <div class="block">
+                <img src="https://eager-williams-af0d00.netlify.app/assets/images/greenyEarth.png" alt="Image" width="70%" height="30%">
+                <h3>Greeny Earth</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae tempora animi, sapiente deleniti quod dicta similique, culpa harum laboriosam alias nisi, doloremque in. Aspernatur, incidunt. Magni rerum tempore quo necessitatibus.</p>
+                <a href="#">Check it Out</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact section -->
+    <div class="contacts" id="Contacts">
+        <h1>Get in Touch with Me</h1>
+        <div class="contactformcontainer">
+            <div class="contactform">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required/>
+            </div>
+            <div class="contactform">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required/>
+            </div>
+           
+            <div class="contactform" style="margin-top: 10px;">
+                <input type="submit" value="Submit" id="submit-btn">
+            </div>
+        </div>
+    </div>
+
+    <!-- Social accounts - Fixed to the right -->
+    <div class="socials">
+        <a href="#">
+            <img src="https://help.twitter.com/content/dam/help-twitter/brand/logo.png" alt="twitter" loading="lazy" class="socicon">
+        </a>
+        <a href="#">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="instagram" loading="lazy" class="socicon">
+        </a>
+        <a href="#">
+            <img src="https://static.vecteezy.com/system/resources/previews/018/930/587/original/linkedin-logo-linkedin-icon-transparent-free-png.png" alt="linkedin" loading="lazy" class="socicon">
+        </a>
+        <a href="#">
+            <img src="https://marcas-logos.net/wp-content/uploads/2020/03/GITHUB-LOGO-1080x608.png" alt="github" loading="lazy" class="socicon">
+        </a>
+    </div>
+
+    <!-- Footer section -->
+    <footer>
+        <h3>ABHAY | Portfolio</h3>
+        <span>Contact at: contactabhay@mail.com</span>
+    </footer>
+
+    <!-- Website scripts -->
+</body>
+
+</html>
